@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Styles.css">
+
+</head>
+<body class="Asignatura">
+    <h1 class ="h1Asig">GESTION DE ASIGNATURA</h1>
+    <img src="Imgs/Logo_Universidad.png" style="position: absolute; top: 20px; right: 20px; width: 128px; z-index: 10;";>
+    <br><br> 
+   <hr>
+   <div class="AgregarEstudiante">
+        <div class="form-group">
+            <label for="nombre">Ingresa el Nombre de la asignatura</label>
+            <input type="text" id="nombre" class="input-estilo" placeholder="Ej: Arquitectura">
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label for="grupo">Ingresa el Grupo de la asignatura</label>
+            <input type="text" id="grupo" class="input-estilo" placeholder="Ej: 402A">
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label for="codigo">Ingresa el Código de la asignatura</label>
+            <input type="text" id="codigo" class="input-estilo" placeholder="Ej: 234562">
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label for="semestre">Ingresa el Semestre de la asignatura</label>
+            <input type="text" id="semestre" class="input-estilo" placeholder="Ej: IIS">
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <label for="creditos">Ingresa la cantidad de Créditos de la asignatura</label>
+            <input type="number" id="creditos" class="input-estilo" placeholder="Ej: 3">
+        </div>
+
+        <br>
+
+        <div class="form-group">
+            <button type="button" class="btn" id="GuardarAsignatura" onclick="guardarAsignatura()">Guardar asignatura</button>
+        </div>
+    </div>
+
+    <div class="AgregarEstudiante">
+        <h2>Agregar Estudiantes</h2>
+        <div class="form-group">
+            <label for="Modificarnombre">Ingresa el Nombre de la asignatura</label>
+            <input type="text" id="Modificarnombre" class="input-estilo" placeholder="Ej: Cálculo M">
+        </div>
+    
+        <br>
+    
+        <div class="form-group">
+            <label for="Modificargrupo">Ingresa el Grupo de la asignatura</label>
+            <input type="text" id="Modificargrupo" class="input-estilo" placeholder="Ej: 402C">
+        </div>
+    
+        <br>
+    
+        <div class="form-group">
+            <label for="Modificarcodigo">Ingresa el Código de la asignatura</label>
+            <input type="text" id="Modificarcodigo" class="input-estilo" placeholder="Ej: 244542">
+        </div>
+    
+        <br>
+    
+        <div class="form-group">
+            <label for="Modificaremestre">Ingresa el Semestre de la asignatura</label>
+            <input type="text" id="Modificaremestre" class="input-estilo" placeholder="Ej: IIIS">
+        </div>
+    
+        <br>
+    
+        <div class="form-group">
+            <label for="Modificarcreditos">Ingresa la cantidad de Créditos de la asignatura</label>
+            <input type="number" id="Modificarcreditos" class="input-estilo" placeholder="Ej: 4">
+        </div>
+    
+        <br>
+    
+        <div class="form-group">
+            <button type="button" class="btn" id="GuardarModificacion" onclick="modificarAsignatura()">Guardar modificación</button>
+        </div>
+    </div>
+    
+
+
+
+
+</body>
+</html>
