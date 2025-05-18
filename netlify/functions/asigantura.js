@@ -1,14 +1,14 @@
-var express = require('express');
-var cors = require('cors');
-var serverless = require('serverless-http');
-var port = process.env.PORT || 3000;
-var app = express();
-var estudiantesroutes = require('../../BackEnd/routes/AsignaturaRoutes');
-app.use(express.json());
+// cambio de prueba para netlify
+const express = require('express');
+const cors = require('cors');
+const serverless = require('serverless-http');
+
+const app = express();
+const estudiantesroutes = require('../../BackEnd/routes/AsignaturaRoutes');
+
 app.use(cors());
+app.use(express.json());
+app.use('/estudiantes', estudiantesroutes);
 
-var router = express.Router();
-router.use('/estudiantes', estudiantesroutes);
-
-var handler = app.use ('/.netlify/functions/api', router); // path must route to lambda
-exports.handler = serverless(app);
+// Exporta como handler para Netlify
+module.exports.handler = serverless(app);
