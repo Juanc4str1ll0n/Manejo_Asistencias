@@ -8,6 +8,6 @@ app.use(express.json());
 app.use(cors());
 
 var router = express.Router();
-router.use ("/asignatura",asignaturaroutes);
+router.use ("/asignatura",departamentoroutes);
 var handler = app.use ('/.netlify/functions',router);
 exports.handler = serverless (app);
