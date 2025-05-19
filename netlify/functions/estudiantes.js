@@ -11,4 +11,4 @@ var router = express.Router();
 router.use ("/asignatura",asignaturaroutes);
 var handler = app.use ('/.netlify/functions',router);
 exports.handler = serverless (app);
-//commit 
+//commit
