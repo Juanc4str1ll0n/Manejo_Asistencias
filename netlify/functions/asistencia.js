@@ -3,11 +3,11 @@ var cors = require("cors");
 var serverless = require ('serverless-http');
 var port = process.env.PORT || 5000;
 var app = express();
-var asignaturaroutes = require("../../Backend/routes/asignaturaroutes.js");
+var asistenciaroutes = require("../../Backend/routes/Asistenciaroutes.js");
 app.use(express.json());
 app.use(cors());
 
 var router = express.Router();
-router.use ("/asignatura",asignaturaroutes);
+router.use ("/asistencia",asistenciaroutes);
 var handler = app.use ('/.netlify/functions',router);
 exports.handler = serverless (app);

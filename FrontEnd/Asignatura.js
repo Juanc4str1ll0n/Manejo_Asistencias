@@ -6,3 +6,5 @@ let raw = JSON.stringify({
     "creditosAsig": document.getElementById("creditosAsig").value,
     
 });
+
+//mandarlo a npoint del backend
