@@ -1,9 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const asignaturacontroller = require("../controllers/asignaturacontroller");
+const asignaturaController = require("../controllers/asignaturacontroller");
 
-router.get("/",asignaturacontroller.consultar);
-router.post("/",asignaturacontroller.ingresar);
-
+router.get("/", asignaturaController.consultar);
+router.post("/", asignaturaController.ingresar);
 
 module.exports = router;

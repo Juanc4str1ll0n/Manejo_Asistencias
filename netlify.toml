@@ -1,3 +1,6 @@
 [build]
-    functions = "netlify/functions"
-  
+  publish = "FrontEnd"        # Cambia esto si tu HTML está en otra carpeta
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"

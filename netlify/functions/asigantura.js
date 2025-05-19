@@ -1,14 +1,13 @@
-// cambio de prueba para netlify
-const express = require('express');
-const cors = require('cors');
-const serverless = require('serverless-http');
-
-const app = express();
-const estudiantesroutes = require('../../BackEnd/routes/AsignaturaRoutes');
-
-app.use(cors());
+var express = require('express');
+var cors = require("cors");
+var serverless = require ('serverless-http');
+var port = process.env.PORT || 5000;
+var app = express();
+var asignaturaroutes = require("../../Backend/routes/asignaturaroutes.js");
 app.use(express.json());
-app.use('/estudiantes', estudiantesroutes);
+app.use(cors());
 
-// Exporta como handler para Netlify
-module.exports.handler = serverless(app);
+var router = express.Router();
+router.use ("/asignatura",asignaturaroutes);
+var handler = app.use ('/.netlify/functions',router);
+exports.handler = serverless (app);

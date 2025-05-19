@@ -1,9 +1,18 @@
-const express = require("express");
-const router = express.Router();
-const estudiantescontroller = require("../controllers/de");
+exports.consultar = async (req, res) => {
+    try {
+        // Lógica para consultar el nombre del departamento
+        res.json({ nombre: "Nombre del Departamento" });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
 
-router.get("/",estudiantescontroller.consultar);
-router.post("/",estudiantescontroller.ingresar);
-
-
-module.exports = router;
+exports.modificar = async (req, res) => {
+    try {
+        const { nuevoNombre } = req.body;
+        // Lógica para modificar el nombre del departamento
+        res.send("Departamento modificado exitosamente");
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
